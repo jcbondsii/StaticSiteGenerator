@@ -2,6 +2,7 @@ from textnode import TextNode, TextType, LeafNode
 from htmlnode import HTMLNode
 import re
 
+
 def split_nodes_delimiter(old_nodes, delimiter, text_type):
     new_nodes = []
     for node in old_nodes:
@@ -87,13 +88,3 @@ def text_to_textnodes(text):
     nodes = split_nodes_image(nodes)
     nodes = split_nodes_link(nodes)
     return nodes
-
-def markdown_to_blocks(markdown):
-    blocks = markdown.split("\n\n")
-    filtered_blocks = []
-    for block in blocks:
-        if block == "":
-            continue
-        block = block.strip()
-        filtered_blocks.append(block)
-    return filtered_blocks
