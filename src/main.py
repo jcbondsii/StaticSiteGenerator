@@ -1,7 +1,9 @@
-from textnode import TextNode, TextType
+from copy import copy_folder
 
 def main():
-    node = TextNode("This is some anchor text", TextType.LINK, "https://www.boot.dev/")
-    print(node)
+    source = "./static"
+    destination = "./public"
+    copy_folder(source, destination)
 
-main()
+if __name__ == "__main__":
+    main()
