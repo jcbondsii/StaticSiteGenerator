@@ -1,9 +1,6 @@
 from platform import node
 import unittest
 from markdown_blocks import markdown_to_blocks,block_to_block_type, BlockType, markdown_to_html_node
-from textnode import TextNode, TextType
-from inline_markdown import (text_to_textnodes)
-from htmlnode import HTMLNode
 
 
 class TestMarkdownBlocks(unittest.TestCase):
