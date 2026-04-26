@@ -25,10 +25,18 @@ def generate_page(from_path, template_path, dest_path):
     to_file = open(dest_path, "w")
     to_file.write(template)
 
-
 def extract_title(md):
     lines = md.split("\n")
     for line in lines:
         if line.startswith("# "):
             return line[2:]
     raise ValueError("no title found")
+
+def generate_page_recursive(from_dir_path, template_path, dest_dir_path):
+    for filename in os.listdir(from_dir_path):
+        from_path = os.path.join(from_dir_path, filename)
+        dest_path = os.path.join(dest_dir_path, filename)
+        if os.path.isfile(from_path):
+            generate_page(from_path, template_path, dest_path.replace(".md", ".html"))
+        else:
+            generate_page_recursive(from_path, template_path, dest_path)

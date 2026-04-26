@@ -1,0 +1,6 @@
+# Run this command to download the files from boot.net.
+
+curl -o static/images/tolkien.png https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/eWyYRQu-1026x388.png
+curl -o static/images/glorfindel.png https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/glorfindel.png
+curl -o static/images/tom.png https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/tom.png
+curl -o static/images/rivendell.png https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/rivendell.png
